@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+
+    min-height:100vh;
+
+    display:flex;
+    
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:1100px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===== HEADER ===== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:40px;
+
+}
+
+.dashboard-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.dashboard-left h1{
+
+    color:#f59e0b;
+
+    font-size:36px;
+
+    margin:0;
+
+}
+
+.dashboard-left h3{
+
+    color:#555;
+
+    margin-top:10px;
+
+    font-weight:500;
+
+}
+
+.dashboard-right{
+
+    text-align:right;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* ===== MENU ===== */
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    text-decoration:none;
+
+    background:#f8fafc;
+
+    color:#1e293b;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#f59e0b;
+
+    background:#fff8e1;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.icon{
+
+    display:block;
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.logout{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+    color:white;
+
+    border-color:#dc2626;
+
+}
+
+@media(max-width:768px){
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .dashboard-right{
+
+        text-align:left;
+
+    }
+
+    .menu{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .container{
+
+        padding:25px;
+
+    }
+
+}
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.footer p:first-child{
+
+    color:#f59e0b;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}

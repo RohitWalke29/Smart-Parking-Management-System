@@ -1,0 +1,423 @@
+/* ===========================
+        RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+/* ===========================
+         BODY
+=========================== */
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ===========================
+       CONTAINER
+=========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:40px;
+
+}
+
+.dashboard-left{
+
+    flex:1;
+
+}
+
+.dashboard-left h2{
+
+    color:#f59e0b;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-left p{
+
+    color:#666;
+
+    font-size:20px;
+
+}
+
+.dashboard-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    text-align:right;
+
+    min-width:260px;
+
+    color:#444;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+          MENU
+=========================== */
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+/* ===========================
+          CARD
+=========================== */
+
+.card{
+
+    background:#f8fafc;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-decoration:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:55px;
+
+    color:#f59e0b;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.card span{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    color:#333;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:#f59e0b;
+
+    color:#fff;
+
+}
+
+.card:hover span{
+
+    color:#fff;
+
+}
+
+/* ===========================
+         LOGOUT
+=========================== */
+
+.logout{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.logout span{
+
+    color:#dc2626;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+    color:#fff;
+
+}
+
+.logout:hover span{
+
+    color:#fff;
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .dashboard-right{
+
+        width:100%;
+
+        align-items:flex-start;
+
+        text-align:left;
+
+    }
+
+    .menu{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ===========================
+     NOTIFICATION BELL
+=========================== */
+
+.top-right{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    width:100%;
+
+    margin-bottom:10px;
+
+}
+
+.notification{
+
+    position:relative;
+
+}
+
+.bell{
+
+    position:relative;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.bell:hover{
+
+    transform:scale(1.15);
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    width:18px;
+
+    height:18px;
+
+    background:#ef4444;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+.notification-box{
+
+    display:none;
+
+    position:absolute;
+
+    top:40px;
+
+    right:0;
+
+    width:280px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+    overflow:hidden;
+
+    z-index:1000;
+
+}
+
+.notification-box h4{
+
+    background:#f59e0b;
+
+    color:#fff;
+
+    padding:12px;
+
+    font-size:17px;
+
+}
+
+.notification-box hr{
+
+    display:none;
+
+}
+
+.notification-box p{
+
+    padding:12px 15px;
+
+    font-size:15px;
+
+    color:#444;
+
+    border-bottom:1px solid #eee;
+
+    transition:.3s;
+
+}
+
+.notification-box p:last-child{
+
+    border-bottom:none;
+
+}
+
+.notification-box p:hover{
+
+    background:#f8fafc;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+        DATE & TIME
+=========================== */
+
+#currentDate{
+
+    margin-top:8px;
+
+}
+
+#currentTime{
+
+    margin-top:3px;
+
+}
+
+/* ===========================
+      SMOOTH EFFECT
+=========================== */
+
+.card{
+
+    transition:all .35s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
